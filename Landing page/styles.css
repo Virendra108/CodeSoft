@@ -1,0 +1,162 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #ffffff; /* Simple white background */
+    color: #333333; /* Dark text color for better visibility */
+}
+
+nav {
+    background: linear-gradient(to right, #e44cb4, #fcb45c);
+    padding: 10px;
+    text-align: center;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #66ccff;
+}
+
+.hero {
+    background-image: url('/hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(to right,  #e44cb4, #fcb45c);
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(to right, #cd034a, #b86593);
+    transition: width 0.5s ease;
+    z-index: -1;
+}
+
+.cta-button:hover::before {
+    width: 105%;
+}
+
+.cta-button:hover {
+    color: #ffffff;
+}
+
+.content-section {
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(to right, #ffffff, #f0f0f0); /* White to light gray gradient background */
+    border-bottom: 1px solid #ccc;
+}
+
+.feature, .service, .pricing-plan {
+    margin-bottom: 20px;
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.service {
+    background-color: #e6f7ff;
+    color: #333333;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.service:hover {
+    transform: scale(1.05);
+}
+
+.contact-section {
+    background: linear-gradient(to right, #e44cb4, #fcb45c);
+    padding: 40px;
+    text-align: center;
+    color: #ffffff; /* Set text color to white */
+}
+
+.contact-section p {
+    margin: 10px 0;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label, form textarea, form input[type="text"], form input[type="email"] {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    color: #ffffff;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    background: linear-gradient(to right, #007acc, #0099e6);
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background: linear-gradient(to right, #0099e6, #007acc);
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333333;
+}
+
+footer {
+    background: linear-gradient(to right, #e44cb4, #fcb45c);
+    color: #ffffff; /* Set text color to white */
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.footer-hide {
+    transform: translateY(100%);
+}

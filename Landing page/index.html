@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Your Beautiful Landing Page</title>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">ULTRA AI</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to Your Beautiful Brand</h1>
+        <p>Your tagline or a brief description goes here.</p>
+        <a href="#features" class="cta-button">Learn More</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="content-section">
+        <h2>About Us</h2>
+        <p>Welcome to ULTRA AI, where creativity meets cutting-edge technology. 
+            We are a passionate team of innovators dedicated to revolutionizing the way you create and enhance visual content.
+             Our mission is to empower individuals and businesses with powerful AI-driven tools that unlock the full potential of your imagination.</p>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="content-section">
+        <h2>Features</h2>
+        <div class="feature">
+            <h3>AI photoediting</h3>
+            <p>Transforming ordinary photos into extraordinary masterpieces has never been easier.
+                 At ULTRA AI, we bring the future of photo editing to your fingertips through our cutting-edge AI Photo Editing feature. </p>
+        </div>
+        <div class="feature">
+            <h3>AI Video editing</h3>
+            <p>Revolutionize your video editing experience with our state-of-the-art AI Video Editing feature at ULTRA AI. 
+                Unleash the full potential of your footage, from basic edits to creative storytelling, all powered by cutting-edge artificial intelligence.</p>
+        </div>
+        <!-- Add more features as needed -->
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="content-section">
+        <h2>Our Services</h2>
+        <div class="services-container">
+            <div class="service">
+                <h3>Service 1</h3>
+                <p>AI Photoediting.</p>
+            </div>
+            <div class="service">
+                <h3>Service 2</h3>
+                <p>AI Video editing.</p>
+            </div>
+            <!-- Add more services as needed -->
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Information</h2>
+        <p>Phone: +123 456 789</p>
+        <p>Email: info@example.com</p>
+        <p>Address: Your Company Address</p>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="content-section">
+        <h2>Our Pricing</h2>
+        <div class="pricing-plan">
+            <h3>Basic Plan</h3>
+            <p>Any one service</p>
+            <p class="price">$19.99/month</p>
+            <button class="cta-button">Choose Plan</button>
+        </div>
+        <div class="pricing-plan">
+            <h3>Premium Plan</h3>
+            <p>Combo of both the services</p>
+            <p class="price">$29.99/month</p>
+            <button class="cta-button">Choose Plan</button>
+        </div>
+        <!-- Add more pricing plans as needed -->
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 ULTRA AI. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Smooth Scrolling and Auto-Hide Footer -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        const footer = document.querySelector('footer');
+
+        document.addEventListener('mousemove', (e) => {
+            const { clientY } = e;
+
+            if (clientY > window.innerHeight - 50) {
+                footer.classList.add('footer-hide');
+            } else {
+                footer.classList.remove('footer-hide');
+            }
+        });
+    </script>
+
+</body>
+</html>
